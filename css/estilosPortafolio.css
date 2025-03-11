@@ -1,0 +1,194 @@
+
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    text-align: center;
+    background-color: #354C6B;
+}
+
+/* Imagen de encabezado */
+header {
+    width: 100%;
+    height: 470px; /* Ajusta según necesites */
+    overflow: hidden;
+}
+
+#header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor{
+    position: relative; /* Permite posicionar elementos hijos */
+    display: inline-block;
+    height: 480px; /* Ajusta según necesites */
+    
+}
+
+.contenedor1 {
+    width: 100%; /* La imagen será responsiva */
+    height: auto;
+    display: inline-block;;
+    overflow: hidden;
+}
+
+.contenedor_f {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde arriba */
+    right: 0vw; /* Ajusta la distancia desde la derecha */
+    right: px;
+    color: white; /* Color del texto */
+    font-size: 1.5vw;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+
+.contenedor_w {
+    position: absolute;
+    top: 10px;
+    right: 16vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+.contenedor_G {
+    position: absolute;
+    top: 10px;
+    right: 9vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+
+
+header {
+    top: 50px; /* Ajusta la distancia desde arriba */
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    display: inline-block;;
+    overflow: hidden;
+   
+}
+
+
+.info-usuario {
+    right: vw;
+    font-size: 1.5vw;
+    white-space: nowrap;
+
+    top: 300px; 
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 25px;
+    border-radius: 15px;
+    border: 2px solid white;
+    text-align: center;
+}
+
+/* Logo */
+.logo-container img {
+    white-space: nowrap;
+    right: vw;
+    font-size: 1.5vw;
+
+    
+    top: 375px;
+    position: absolute;
+    width: 200px; /* Ajusta el tamaño del logo */
+    height: auto;
+    border-radius: 50%;
+    background: white;
+    padding: 2px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor de cajas */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Hace que las cajas bajen en pantallas pequeñas */
+    gap: 20px;
+    padding: 20px;
+}
+
+.caja {
+    width: 300px;
+    height: 200px;
+    background-color: #ff6b6b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Efecto hover */
+.caja:hover {
+    background-color: #ff4747;
+}
+
+/* 🔥 MEDIA QUERIES PARA HACERLO RESPONSIVO 🔥 */
+
+/* 📱 Para teléfonos (menos de 600px) */
+@media (max-width: 600px) {
+    header {
+        height: 150px;
+    }
+
+    .caja {
+        width: 90%; /* Ocupa casi todo el ancho */
+        height: 150px;
+        font-size: 1.2rem;
+    }
+}
+
+/* 📟 Para tablets (600px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        height: 200px;
+    }
+
+    .caja {
+        width: 45%; /* Se acomodan en dos columnas */
+        height: 180px;
+        font-size: 1.3rem;
+    }
+}
+
