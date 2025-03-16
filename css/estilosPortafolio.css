@@ -1,6 +1,6 @@
 
 
-/* Estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,10 +13,11 @@ body {
     background-color: #354C6B;
 }
 
-/* Imagen de encabezado */
+
 header {
+    
     width: 100%;
-    height: 470px; /* Ajusta según necesites */
+    height: 470px;
     overflow: hidden;
 }
 
@@ -27,9 +28,9 @@ header {
 }
 
 .contenedor{
-    position: relative; /* Permite posicionar elementos hijos */
+    position: relative; 
     display: inline-block;
-    height: 480px; /* Ajusta según necesites */
+    height: 480px;
     
 }
 
@@ -79,20 +80,41 @@ header {
     white-space: nowrap; /* Evita que el texto haga salto de línea */
 }
 
+.contenedor1,
+.contenedor_f,
+.contenedor_G,
+.contenedor_w{
+    
+    display: inline-block;
+    align-items: flex-start;
+    display: inline-block; /* Para que se comporten como botones */
+    padding: px; /* Espaciado interno */
+     /* Color de fondo azul (ajústalo a tu gusto) */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 17px; /* Tamaño del texto */
+    /* Texto en negrita */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+}
+
+.boton:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 6px 8px rgba(17, 32, 163, 0.3); /* Sombra más pronunciada */
+}
+
+
+
 
 header {
-    top: 50px; /* Ajusta la distancia desde arriba */
-   
+    top: 50px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: auto;
     display: inline-block;;
     overflow: hidden;
-   
 }
-
-
 .info-usuario {
     right: vw;
     font-size: 1.5vw;
@@ -127,68 +149,503 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* Contenedor de cajas */
-.contenedor {
+.acerca-container {
+    margin-top: 30px; /* Separa el contenido de arriba */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Hace que las cajas bajen en pantallas pequeñas */
-    gap: 20px;
-    padding: 20px;
+    justify-content: flex-end;  /* Asegura alineación a la izquierda */
+    align-items: center; /* Opcional: centra verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    padding-right: 10px; /* Ajusta el espacio desde la izquierda */
 }
 
-.caja {
-    width: 300px;
-    height: 200px;
-    background-color: #ff6b6b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.acerca-de {
+    
+    max-width: 800px; /* Controla el ancho del texto */
+    background-color: #2C3E50; /* Color de fondo */
     color: white;
-    font-size: 1.5rem;
+    padding: 20px;
     border-radius: 10px;
-    transition: 0.3s;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* Efecto hover */
-.caja:hover {
-    background-color: #ff4747;
+
+
+
+.Menu {
+    align-items: flex-start;
+    margin-top: -240px;
+    max-width: 150px; /* Controla el ancho del texto */
+    /* Asegura que el texto esté alineado a la derecha */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 10px;
+    line-height: 1.6;
 }
 
-/* 🔥 MEDIA QUERIES PARA HACERLO RESPONSIVO 🔥 */
 
-/* 📱 Para teléfonos (menos de 600px) */
-@media (max-width: 600px) {
-    header {
-        height: 150px;
-    }
 
-    .caja {
-        width: 90%; /* Ocupa casi todo el ancho */
-        height: 150px;
-        font-size: 1.2rem;
-    }
+
+
+.Menu a {
+    align-items: flex-start;
+    display: inline-block; /* Para que se comporten como botones */
+    padding: 5px; /* Espaciado interno */
+    background-color: #8495a7; /* Color de fondo azul (ajústalo a tu gusto) */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 12px; /* Tamaño del texto */
+    /* Texto en negrita */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
 }
 
-/* 📟 Para tablets (600px - 1024px) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    header {
-        height: 200px;
-    }
-
-    .caja {
-        width: 45%; /* Se acomodan en dos columnas */
-        height: 180px;
-        font-size: 1.3rem;
-    }
+.Menu a:hover {
+    background-color: #2C3E50; /* Oscurece el botón al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento */
 }
+
+.Menu {
+    align-items: flex-start;
+    display: flex;
+    gap: 15px; /* Espaciado entre los botones */
+    justify-content: center; /* Centra los botones */
+    flex-wrap: wrap; /* Permite que los botones se acomoden en varias líneas si es necesario */
+}
+
+.Menu h1 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.proyectos-container {
+    
+    margin-top: -150px; /* Separación del contenido superior */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+    padding-right: 10px; /* Ajusta el espacio desde la derecha (si es necesario) */
+}
+
+.proyectos {
+    margin-top: -150px;
+    display: flex;
+    justify-content: center; /* Asegura que el contenido dentro esté centrado */
+    align-items: center; /* Centra el texto verticalmente dentro del cuadro */
+    max-width: 200px; /* Controla el ancho del texto */
+    background-color: #8495a7; /* Color de fondo */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+.Butterfly-general-container{
+        
+        display: flex; /* Poner los elementos en fila */
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Alinear verticalmente */
+        gap: 20px; /* Espacio entre los elementos */
+        flex-wrap: wrap; /* Si no caben en la pantalla, los manda a la siguiente línea */
+        margin-top: -400px;
+        gap: 120px;
+
+    
+}
+
+
+
+.Butterfly-container {
+    
+   /* margin-top: -450px; /* Separación del contenido superior */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+    padding-right: 10px; /* Ajusta el espacio desde la derecha (si es necesario) */
+    /*margin-right: 20px; /* Espacio a la derecha */
+    /*rgin-left: 15px; */
+    
+}
+
+.Butterfly {
+    display: flex;
+    justify-content: center; /* Asegura que el contenido dentro esté centrado */
+    align-items: center; /* Centra el texto verticalmente dentro del cuadro */
+    max-width:200px; /* Controla el ancho del texto */
+    background-color: #5b7188; /* Color de fondo */
+    color: white;
+    padding:35px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.Butterfly2-container {
+    /*margin-top: -12px; /* Separación del contenido superior */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+    padding-right: 10px; /* Ajusta el espacio desde la derecha (si es necesario) */
+    
+}
+
+.Butterfly2 {
+    display: flex;
+    justify-content: center; /* Asegura que el contenido dentro esté centrado */
+    align-items: center; /* Centra el texto verticalmente dentro del cuadro */
+    max-width: 200px; /* Controla el ancho del texto */
+    background-color: #5b7188; /* Color de fondo */
+    color: white;
+    padding:35px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.Butterfly3-container {
+    /*margin-top: -120px; /* Separación del contenido superior */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+    padding-right: 10px; /* Ajusta el espacio desde la derecha (si es necesario) */
+}
+
+.Butterfly3 {
+    display: flex;
+    justify-content: center; /* Asegura que el contenido dentro esté centrado */
+    align-items: center; /* Centra el texto verticalmente dentro del cuadro */
+    max-width: 200px; /* Controla el ancho del texto */
+    background-color: #5b7188; /* Color de fondo */
+    color: white;
+    padding:35px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+.Butterfly-container img,
+.Butterfly2-container img,
+.Butterfly3-container img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.Butterfly-container img:hover,
+.Butterfly2-container img:hover,
+.Butterfly3-container img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño un 10% al pasar el mouse */
+}
+
+
+
+.Butterfly-container,
+.Butterfly2-container,
+.Butterfly3-container {
+    transition: transform 0.3s ease-in-out;
+}
+
+.Butterfly-container:hover,
+.Butterfly2-container:hover,
+.Butterfly3-container:hover {
+    transform: scale(1.1); /* Aumenta el tamaño un 10% al pasar el mouse */
+}
+
+
+
+
+a {
+    color: inherit; /* Hereda el color del texto del contenedor */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+
+.lenguajes-container {
+    
+    margin-top: -200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+    padding-right: 10px; /* Ajusta el espacio desde la derecha (si es necesario) */
+    margin-left:20px;
+    
+}
+
+.lenguajes {
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente dentro del cuadro */
+    max-width: 200px; /* Controla el ancho del texto */
+    background-color: #8495a7; /* Color de fondo */
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    line-height: 1.6;
+
+}
+
+
+
+
+
+
+
+
+.containerb {
+    position: relative;
+    top: -150px; /* Lo mueve 20px hacia arriba */
+    margin: auto; /* Centra horizontalmente */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1E2A38;
+    padding: 30px;
+    border-radius: 25px;
+    border: 2px solid #3498DB; /* Borde azul */
+    width: 70%;
+}
+
+.item {
+    text-align: center;
+}
+
+.button {
+    background-color: #33A9DC;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.link {
+    display: block;
+    color: #AAB7C4;
+    font-size: 14px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+
+
+
+.button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño un 10% al pasar el mouse */
+}
+
+.certificaciones-container {
+    
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+    padding-right: 10px; /* Ajusta el espacio desde la derecha (si es necesario) */
+    margin-left:20px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.certificaciones {
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente dentro del cuadro */
+    max-width: 200px; /* Controla el ancho del texto */
+    background-color: #8495a7; /* Color de fondo */
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    line-height: 1.6;
+
+}
+
+
+
+
+.certificaciones-general{
+    
+    display: flex; /* Poner los elementos en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Alinear verticalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Si no caben en la pantalla, los manda a la siguiente línea */
+    margin-top: -400px;
+    gap: 270px;
+}
+.flutter-flow{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    background-color:#5b7188;
+    color: white;
+    padding:35px;
+    border-radius: 25px;
+    font-size:16px ;
+    line-height:1.6;
+    
+
+}
+
+
+.trabajo-remoto{
+    margin-top: 200px;
+    flex-direction: column; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    background-color:#5b7188;
+    color: white;
+    padding:35px;
+    border-radius: 25px;
+    font-size:16px ;
+    line-height:1.6;
+    text-align: center;
+    
+
+}
+.flutter-flow,
+.trabajo-remoto {
+    transition: transform 0.3s ease-in-out;
+}
+.flutter-flow:hover,
+.trabajo-remoto:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.experiencia-container {
+    
+    margin-top: -200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+    padding-right: 10px; /* Ajusta el espacio desde la derecha (si es necesario) */
+    margin-left:20px;
+    
+}
+
+.experiencia  {
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente dentro del cuadro */
+    max-width: 200px; /* Controla el ancho del texto */
+    background-color: #8495a7; /* Color de fondo */
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    line-height: 1.6;
+
+}
+
+
+
+.ex{
+    margin-top: -200px; /* Separa el contenido de arriba */
+    display: flex;
+    justify-content: center;  /* Asegura alineación a la izquierda */
+    align-items: center; /* Opcional: centra verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    padding-right: 10px; /* Ajusta el espacio desde la izquierda */
+    
+}
+
+.exp1 {
+    max-width: 800px; /* Controla el ancho del texto */
+    background-color: #2C3E50; /* Color de fondo */
+    color: white;
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 2px solid #3498DB;
+    text-align: left;
+}
+
+.academia{
+    margin-top: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.academia1{
+    width: 80%; 
+    max-width: 1000px;     
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    
+    border-radius: 40px;
+    font-size: 16px;
+    line-height: 1.6;
+    border:2px solid #3498DB;
+    text-align: center;
+
+}
+
+#academia-img {
+    display: block; /* Evita espacios no deseados */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    max-width: 600px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados si lo deseas */
+    
+}
+
+.bonton {
+    display: inline-block;
+}
+
+.bonton a {
+    display: block; /* Hace que el enlace ocupe todo el div */
+    padding: 10px 20px;
+    background-color: #3f6691; /* Color azul */
+    color: white; /* Texto en blanco */
+    text-decoration: none; /* Quitar subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.bonton a:hover {
+    background-color: #0056b3; /* Oscurecer el color al pasar el mouse */
+}
+
+
+
+
+
+
 
